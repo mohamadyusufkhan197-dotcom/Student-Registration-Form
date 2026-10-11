@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex justify-center items-center p-4">
+
+    <div class="bg-white p-6 rounded-xl shadow-lg w-full max-w-md">
+
+        <h1 class="text-2xl font-bold text-center mb-2">
+            Student Registration
+        </h1>
+
+        <p class="text-gray-500 text-center mb-6">
+            Enter your details to register
+        </p>
+
+        <form id="studentForm">
+
+            <label class="block mb-1">Student Name</label>
+            <input type="text" id="name"
+                class="border p-2 w-full rounded mb-1"
+                placeholder="Enter your name">
+
+            <p id="nameError" class="text-red-500 text-sm mb-3"></p>
+
+            <label class="block mb-1">Email Address</label>
+            <input type="text" id="email"
+                class="border p-2 w-full rounded mb-1"
+                placeholder="Enter your email">
+
+            <p id="emailError" class="text-red-500 text-sm mb-3"></p>
+
+            <label class="block mb-1">Password</label>
+            <input type="password" id="password"
+                class="border p-2 w-full rounded mb-1"
+                placeholder="Minimum 6 characters">
+
+            <p id="passwordError" class="text-red-500 text-sm mb-3"></p>
+
+            <label class="block mb-1">Department</label>
+            <select id="department"
+                class="border p-2 w-full rounded mb-5">
+                <option value="">Select Department</option>
+                <option value="BCA">BCA</option>
+                <option value="BSc Computer Science">BSc Computer Science</option>
+                <option value="BCom">BCom</option>
+                <option value="BBA">BBA</option>
+            </select>
+
+            <p id="departmentError" class="text-red-500 text-sm mb-3"></p>
+
+            <button type="submit" id="submitBtn" disabled
+                class="bg-blue-600 text-white p-3 w-full rounded font-semibold disabled:bg-gray-400 hover:bg-blue-700">
+                Register Student
+            </button>
+
+            <p id="successMessage"
+                class="text-green-600 text-center mt-4"></p>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
